@@ -1,0 +1,384 @@
+.container {
+    background-color: white;
+    width: 90%;
+    max-width: 1600px;
+    min-height: 540px;
+}
+
+.navbar {
+    padding: 0;
+}
+
+.navbar-nav > .active{
+    background-color: rgb(12,124,186);
+}
+
+.active > .nav-link {
+    color: white;
+    background-color: rgb(12,124,186);
+}
+
+/* .navbar-nav > .nav-link .active {
+    width: 100%;
+    color:           white;
+    background-color:  rgb(12,124,186);
+} */
+
+.navbar-nav > .nav-item {
+    background-color: rgb(232, 174, 26);
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+.navbar-nav > .nav-item:hover {
+    background-color: rgb(252, 196, 56);
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+.navbar-nav > .nav-item:visited {
+    background-color: rgb(232, 174, 26);
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+.navbar-nav > .nav-item:active {
+    background-color: rgb(232, 174, 26);
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+.navbar-nav > .nav-item:focus {
+    background-color: rgb(232, 174, 26);
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+.navbar-nav > .top-nav-button {
+    font-weight: bolder;
+    color: white;
+    border-style: solid;
+    border-width: thin;
+    border-color: white;
+}
+
+.navbar-nav > .top-nav-button > .nav-link {
+    color: white
+}
+.navbar-nav > .top-nav-button > .nav-link:hover {
+    color: white
+}
+.navbar-nav > .top-nav-button > .nav-link:active {
+    color: white
+}
+.navbar-nav > .top-nav-button > .nav-link:focus {
+    color: white
+}
+.navbar-nav > .nav-item-vertical {
+    font-weight: bold;
+    background-color: white;
+    border-color: lightgray;
+    text-align: left;
+    margin-left: 15px;
+}
+
+.navbar-nav > .nav-item-vertical > .nav-link {
+    margin-left: 15px;
+}
+
+.navbar-nav > .nav-item-vertical:hover {
+    background-color: rgb(12, 124, 186);
+    font-weight: bold;
+    border-color: lightgray;
+    text-align: left;
+}
+
+.navbar-nav {
+    width: 100%;
+}
+
+
+.img-cst {
+    height: auto;
+    width: 100%
+}
+
+.content-body {
+    min-height: 540px;
+}
+
+.content-body-margin {
+    margin-top: 40px;
+}
+
+a:hover {
+    color: white;
+}
+
+a:active {
+    color: white;
+}
+
+.maroon {
+    color: rgb(140, 29, 64)
+}
+
+.header-nav {
+    padding: 15px 0 15px 0;
+}
+
+/* Style the button and place it in the middle of the container/image */
+.img-container .btn {
+    position: absolute;
+    top: 78%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: rgb(140, 29, 64);
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    /*padding: 12px 24px;*/
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 33%;
+    height: 15%;
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.question{
+    background-color: rgb(12,124,186);
+    color: white;
+    width :80%;
+}
+
+.answer{
+    text-align: justify;
+}
+
+.table_cme{
+    border: none;
+    width: inherit;
+}
+
+.acred-stmt{
+    margin-top: 8%;
+    font-size: xx-small;
+}
+
+.li_selected{
+    background-color: rgb(12, 124, 186);
+    color: white;
+}
+
+.li_deselected{
+    border-width: 1px 0 0 0;
+    border-style: solid;
+}
+
+/*table.table-bordered{*/
+/*    border: 1px solid #34ce57 ;*/
+/*}*/
+
+table.table-bordered{
+    border:1px solid rgb(140, 29, 64);
+    margin-top:20px;
+}
+table.table-bordered > thead > tr > th{
+    border:1px solid rgb(140, 29, 64);
+}
+table.table-bordered > tbody > tr > td{
+    border:1px solid rgb(140, 29, 64);
+}
+
+table.table-bordered > tbody > tr > th{
+    border:1px solid rgb(140, 29, 64);
+}
+
+.nav-link.disabled{
+    pointer-events: none;
+    color: gray;
+    cursor: default;
+}
+
+.ce_images{
+    float:  right;
+    width: 30%;
+    height: 30%;
+    background-size: cover;
+}
+
+.indent-left{
+    position: relative;
+    left: 20px;
+}
+
+.tab { margin-left: 40px; }
+
+.dropbtn {
+    background-color: rgb(232, 174, 26);
+    width: 100%;
+    text-align: center;
+    font-weight: bolder;
+    color: white;
+    border-style: solid;
+    border-width: thin;
+    border-color: white;
+    color: white;
+}
+
+.dropdown {
+  position: relative;
+     min-width: 100%;
+  display: inline-block;
+     border: none;
+}
+
+.dropdown-content {
+  box-shadow: 0px 8px 16px 0px 	rgb(12, 124, 186);
+  z-index: 1;
+     font-weight: bold;
+    background-color: white;
+    border-color: lightgray;
+    text-align: left;
+    margin-left: 15px;
+}
+
+.dropdown-content a {
+ font-weight: bolder;
+    color: white;
+    border-style: solid;
+    border-width: thin;
+    border-color: white;
+     min-width: 100%;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #0c7cba;}
+
+.tab { margin-left: 40px; }
+
+.dropbtn {
+  background-color: #0c7cba;
+  color: white;
+  min-width: 160px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+     min-width: 160px;
+  display: inline-block;
+     border: none;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px 	rgb(12, 124, 186);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  text-decoration: none;
+     min-width: 160px;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #0c7cba;}
+
+.tab { margin-left: 40px; }
+
+
+
+
+
+/* Added code */
+
+
+
+/*
+#dropdown-recommend{
+    display: flex;
+    position: absolute;
+    width: 206px;
+    right: 8px;
+    margin-top: 254px !important;
+    z-index: 999;
+    background-color: white;
+}
+
+#listDrop{
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.options{
+    border: 0.5px solid rgb(12,124,186);
+    padding: 0 4px;
+    width: 100%;
+    color: black;
+    cursor: pointer;
+}
+.options:hover{
+    color: blue;
+    text-decoration: none;
+}
+
+*/
+
+/* Style for search cards */
+#cards{
+    /* background-color: rgb(207, 207, 207); */
+    /* background-color: #f0e4e4; */
+    background-color: #e0e0e0;
+    width: 90%;
+    margin: 16px;
+    padding: 10px;
+    border-radius: 4px;
+    border: 2px solid black;
+}
+
+.cards_container{
+    overflow: auto;
+    min-width: 1000px;
+    width: 100%;
+}
+
+#cards_header{
+    font-weight: 700;
+    font-size: 24px;
+    margin-left: 16px;
+}
+
+
+
+/* Stylings for the X and Down Arrow in input field! */
+input[type="search"]::-webkit-search-cancel-button {
+    /* -webkit-appearance: none; */
+    cursor: pointer;
+    margin-right: 6px;    
+}
+
+input::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    margin-bottom: 6px;
+}

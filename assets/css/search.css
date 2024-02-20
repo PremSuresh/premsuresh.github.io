@@ -1,0 +1,8 @@
+.input-group-prepend{
+    width: 200px;
+    border: 1px solid black;
+}
+
+.form-control mr-sm-2{
+    width: 400px;
+}
