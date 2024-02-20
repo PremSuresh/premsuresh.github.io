@@ -1,0 +1,130 @@
+<div class="row">
+    <div class="col-lg">
+        <nav class="navbar navbar-expand-lg navbar-light header-nav">
+            <a href="/index.html"><img src="/assets/img/TIPQIC_Logo_FINAL_PNG24-halfsize.png" alt="" /></a>
+            <a href="/support.html" class="img-fluid img-cst ml-5" alt="Responsive image">
+                <button class="btn btn-secondary" style="height: 70px; background-color: #971616;">
+                    Contact us</button></a>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                </ul>
+                <form class="form-inline my-2 my-lg-0" method="get">
+                    <div class="input-group-prepend">
+                        <input class="form-control mr-sm-2" size="40" id="input-search" list="dropdown-recommend" type="search" placeholder="Search - Select and press enter" autocomplete="off"/>
+                    </div>
+                </form>
+                <datalist id="dropdown-recommend">
+                        <option class="options" value="FUH">FUH</option>
+                        <option class="options" value="Diabetes Screening">(SSD)</option>
+                        <option class="options" value="Metabolic Monitoring">(APM)</option>
+                        <option class="options" value="Well-care visits">(W15, W34, AWC)</option>
+                        <option class="options" value="Dashboards">Dashboards</option>
+                </datalist>
+            </div>
+        </nav>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item top-nav-button">
+                    <a class="nav-link text-uppercase" href="/about.html">ABOUT</a>
+                </li>
+                <li class="nav-item top-nav-button">
+                    <a class="nav-link" href="/req.html">TI ONBOARDING, REQUIREMENTS & PAYMENTS</a>
+                </li>
+               <li class="nav-item top-nav-button">
+                    <a class="nav-link" href="/measures.html">MEASURES & PERFORMANCE MEASUREMENT</a>
+                </li>
+                <li class="nav-item top-nav-button">
+                    <a class="nav-link" href="/dashboard.html">YOUR PERFORMANCE</a>
+                </li>
+                <li class="nav-item top-nav-button">
+                    <a class="nav-link" href="/perfimp.html">PERFORMANCE IMPROVEMENT</a>
+                </li>
+                <li class="nav-item top-nav-button">
+                    <a class="nav-link" href="/qic/TIP2_0.html">QIC MEETINGS & CEU</a>
+                </li>
+                <li class="nav-item top-nav-button">
+                    <a class="nav-link" href="/QIWorkgroups.html">QI WORKGROUPS</a>
+                </li>
+                <li class="nav-item top-nav-button">
+                    <a class="nav-link" href="/faq.html">FAQ</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/popper.js"></script>
+<script src="/bootstrap/js/bootstrap.min.js"></script>
+<!-- Added LocalStorage so it read from every page which search bar HTML is present -->
+<script src="/qic/localStorage.js"></script>
+
+<script>
+    $(function(){
+        $('a').each(function(){
+            if ($(this).prop('href') == window.location.href) {
+                // $(this).addClass('active'); 
+                $(this).parents('li').addClass('active');
+            }
+        });
+    });
+</script>
+<script>
+    // List container div
+    let listContainer = document.getElementById("dropdown-recommend");
+    // List ul
+    let list = document.getElementById("listDrop");
+    // take user input
+    let userInput = document.getElementById("input-search");
+  
+    // $(document).ready(function() {
+    //     $("[list='dropdown-recommend']").on("input propertychange", function() {
+    //         console.log("HII")
+    //         console.log(userInput.value)
+    //         // window.location = $("#dropdown-recommend option[value='"+$("[list='dropdown-recommend']").val()+"']").find("a").attr("href")
+    //     });
+    // });
+
+
+
+    $("form").submit(function(e)
+    {
+        // Prevents reload
+        e.preventDefault();
+        // console.log("OKKK")
+
+        var val = $(userInput).val(); //Suggestion: please use $('#command').val() only one time
+        // console.log(val)
+
+        if(val == "FUH") // >= was wrong
+        {
+            window.location = "/search.html?word=FUH";
+        }
+        else if(val=="Diabetes Screening") // > 50 was wrong
+        {
+            window.location = "/search.html?word=SSD";
+        }
+        else if(val=="Metabolic Monitoring") // > 50 was wrong
+        {
+            window.location = "/search.html?word=APM";
+        }
+        else if(val=="Well-care visits") // > 50 was wrong
+        {
+            window.location = "/search.html?word=W15";
+        }
+        else if(val=="Dashboards") // > 50 was wrong
+        {
+            window.location = "/search.html?word=Dashboards";
+        }
+        else{
+            // Redirect to a page where it says no results found
+            window.location = "/search.html";
+        }
+
+    })
+
+</script>

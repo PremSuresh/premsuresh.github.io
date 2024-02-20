@@ -1,0 +1,96 @@
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
+<!--  If necessary, please modify the charset parameter to specify the        -->
+<!--  character set of your HTML page.                                        -->
+<!--  ----------------------------------------------------------------------  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Registration</title>
+    <!-- Bootstrap core CSS -->
+    <link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="/assets/css/style.css" rel="stylesheet">
+    <link href="/assets/css/footer.css" rel="stylesheet">
+    <style type="text/css">
+</style>
+</head>
+<body>
+<div class="container">
+
+    <!-- Navigation -->
+    <div id='nav-placeholder'>
+        
+    </div>
+    <!--  ----------------------------------------------------------------------  -->
+    <!--  NOTE: Please add the following <FORM> element to your page.             -->
+    <!--  ----------------------------------------------------------------------  -->
+    <h2 class="maroon text-uppercase">Place a support ticket:</h2>
+    <p>
+        Please fill out and submit the following form and our team will reach out to you shortly.
+      </p>
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00DHs000002kLKx" method="POST">
+    
+    <input type=hidden name="orgid" value="00DHs000002kLKx">
+    <input type=hidden name="retURL" value="">
+    
+    <!--  ----------------------------------------------------------------------  -->
+    <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+    <!--  these lines if you wish to test in debug mode.                          -->
+    <!--  <input type="hidden" name="debug" value=1>                              -->
+    <!--  <input type="hidden" name="debugEmail" value="psures20@asu.edu">        -->
+    <!--  ----------------------------------------------------------------------  -->
+    
+    <label for="name">Name *</label><input class="form-control" id="name" maxlength="80" name="name" size="20" type="text" required/><br>
+    
+    <label for="email">Email *</label><input class="form-control" id="email" maxlength="80" name="email" size="20" type="text" required/><br>
+    
+    <label for="phone">Phone </label><input class="form-control" id="phone" maxlength="40" name="phone" size="20" type="text"/><br>
+    
+    <label for="subject">Subject *</label><input class="form-control" id="subject" maxlength="80" name="subject" size="20" type="text" required/><br>
+
+    <label for="description">Description </label><textarea class="form-control" name="description"></textarea><br>
+    
+    <input type="submit" name="submit" class="btn btn-primary">
+    
+    </form>
+</div>
+<p>                    
+    <!-- Footer -->
+    <div class="footer">
+        <!-- Footer Links -->
+        <!-- Grid row -->
+        <div class="row">
+        <!-- Grid column -->
+            <div class="col-md-6 mt-md-0 mt-3">
+                <!-- Content -->
+                <br>
+                CONTACT US: <a style="color: white" href="mailto:TIPQIC@asu.edu">TIPQIC@asu.edu</a>
+                <br>
+            </div>
+        </div>
+        <!-- Grid row -->
+        <!-- Footer Links -->
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">Copyright © 2020-2022 Arizona Board of Regents</div>
+        <!-- Copyright -->
+    </div>
+    <!-- Footer -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/popper.js"></script>
+<script src="/bootstrap/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready( function(){
+        $('#nav-placeholder').load('/qic/nav.html')
+        $('#side-nav-placeholder').load('/qic/side_nav_bar.html')
+    })
+</script>
+</body>

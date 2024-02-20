@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>TIPQIC Search Results</title>
+    <!-- Bootstrap core CSS -->
+    <link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Custom styles for this template -->
+    <link href="/assets/css/style.css" rel="stylesheet">
+    <link href="/assets/css/footer.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation -->
+        <div id='nav-placeholder'>
+            
+        </div>
+        <div class="row content-body content-body-margin">
+                <div id='keyWordResult-placeholder'>
+        </div>
+    <!-- Footer -->
+    </div>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/popper.js"></script>
+<script src="/bootstrap/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready( function(){
+        $('#nav-placeholder').load('/qic/nav.html')
+    })
+</script>
+<script>
+    // Read the URL parameters and change the page accordingly from a html page like nav.html
+    // $(document).ready( function(){
+    //     $('#FUH-placeholder').load('/qic/FUH.html')
+    // })
+</script>
+<script>
+    // // Function to check url for searched word parameter
+    // window.onload = function(){
+    //     const urlParams = window.location.search;
+    //     let currentWordURL = urlParams.split("word=")[1]
+    //     console.log("From search.html:    "+currentWordURL)
+
+    // }
+
+
+
+    // Function to check url for searched word parameter and redirect page content only
+    $(document).ready( function(){
+
+        const urlParams = window.location.search;
+        let currentWordURL = urlParams.split("word=")[1]
+        console.log("From search.html:    "+currentWordURL)
+
+
+
+        if(currentWordURL=="FUH"){
+            $('#keyWordResult-placeholder').load('/qic/FUH.html')
+        }else if(currentWordURL=="SSD"){
+            $('#keyWordResult-placeholder').load('/qic/SSD.html')
+        }else if(currentWordURL=="APM"){
+            $('#keyWordResult-placeholder').load('/qic/APM.html')
+        }else if(currentWordURL=="W15"){
+            $('#keyWordResult-placeholder').load('/qic/W15.html')
+        }else if(currentWordURL=="Dashboards"){
+            $('#keyWordResult-placeholder').load('/qic/Dashboards.html')
+        }        
+        
+        
+        })
+</script>
+</body>

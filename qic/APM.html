@@ -1,0 +1,94 @@
+        <div id="cards_header">Results - Click below boxes to go to the respective page</div>
+        <hr style="width:100%", size="3", color="black">  
+        <div id="cards_container" class="cards_container">
+
+        </div>
+
+<script> // USE SESSION STORAGE from localStorage.js
+
+    // // Make sure it exists in storage first
+    if(localStorage.getItem("APM_WORDS_MeasurePerformance")){
+        let searchResults_measures = JSON.parse(localStorage.getItem("APM_WORDS_MeasurePerformance"));
+        // console.log(searchResults_measures);
+
+        fillSearchCards(searchResults_measures, "Measures & Performance Measurement");
+    }
+
+    // For the page 'YOUR PERFORMANCE'
+    if(localStorage.getItem("APM_WORDS_YourPerformance")){
+        let searchResults_dashboard = JSON.parse(localStorage.getItem("APM_WORDS_YourPerformance"));
+        // console.log(searchResults_dashboard);
+
+        fillSearchCards(searchResults_dashboard, "Your Performance");
+    }
+    
+    // For the page 'PERFORMANCE IMPROVEMENT'
+    if(localStorage.getItem("APM_WORDS_PerformanceImprovement")){
+        let searchResults_perfimp = JSON.parse(localStorage.getItem("APM_WORDS_PerformanceImprovement"));
+        // console.log(searchResults_perfimp);
+
+        fillSearchCards(searchResults_perfimp, "Performance Improvement");
+    }
+
+    // For the page 'QIC MEETINGS & CEU'
+    if(localStorage.getItem("APM_WORDS_QIC_PA&H")){
+        let searchResults_qic = JSON.parse(localStorage.getItem("APM_WORDS_QIC_PA&H"));
+        // console.log(searchResults_qic);
+
+        fillSearchCards(searchResults_qic, "QIC MEETINGS & CEU");
+    }
+
+    // For the page 'QI WORKGROUPS'
+    if(localStorage.getItem("APM_WORDS_QIWorkgroups")){
+        let searchResults_QIWorkgroups = JSON.parse(localStorage.getItem("APM_WORDS_QIWorkgroups"));
+        console.log(searchResults_QIWorkgroups);
+
+        fillSearchCards(searchResults_QIWorkgroups, "QI WORKGROUPS");
+    }
+
+    // For the page 'FAQ'
+    if(localStorage.getItem("APM_WORDS_FAQ")){
+        let searchResults_FAQ = JSON.parse(localStorage.getItem("APM_WORDS_FAQ"));
+        // console.log(searchResults_FAQ);
+
+        fillSearchCards(searchResults_FAQ, "FAQ");
+    }
+
+
+    // // Function to parse locaStorage and replace HTML card content
+    function fillSearchCards(wordOrigin, path) {
+        // Add new div with id=cards under     <div class="col-lg">
+
+            let element = document.createElement("div");
+            // console.log("OKk  "+wordOrigin.length);
+            for(let i=0; i<wordOrigin.length; i++){
+
+
+                // Forms a new div for every new search word instance found
+                element.innerHTML=
+                `${element.innerHTML}`+
+                `<div id="cards">
+                    <h5>Metabolic Monitoring</h5>
+                    ${wordOrigin[i].text}
+                    Location: <a href="${wordOrigin[i].URL}">${path}</a>
+                </div>`;
+                
+                
+                // Insert the above div inside the parent div
+
+                // element.appendChild(document.createTextNode(`${wordOrigin[i]}`));
+
+                // document.body.insertBefore(element, document.getElementById("cards_end"));
+                document.getElementById("cards_container").appendChild(element);
+
+            }
+
+            // document.getElementById("cards_container").appendChild(element);  
+
+        }
+
+
+</script>
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/popper.js"></script>
+<script src="/bootstrap/js/bootstrap.min.js"></script>
