@@ -7,30 +7,22 @@
 <html lang="en">
 <head>
     <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
-    <!-- <meta charset="utf-8"> -->
-    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Registration</title>
-    <!-- Bootstrap core CSS -->
     <link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="/assets/css/style.css" rel="stylesheet">
     <link href="/assets/css/footer.css" rel="stylesheet">
     <style type="text/css">
-</style>
+    </style>
 </head>
 <body>
-<div class="container">
-
-    <!-- Navigation -->
-    <div id='nav-placeholder'>
-        
-    </div>
+    <div class="container">
+    
+        <!-- Navigation -->
+        <div id='nav-placeholder'></div>
     <!--  ----------------------------------------------------------------------  -->
     <!--  NOTE: Please add the following <FORM> element to your page.             -->
     <!--  ----------------------------------------------------------------------  -->
+    <br>
     <h2 class="maroon text-uppercase">Place a support ticket:</h2>
     <p>
         Please fill out and submit the following form and our team will reach out to you shortly.
@@ -44,24 +36,45 @@
     <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
     <!--  these lines if you wish to test in debug mode.                          -->
     <!--  <input type="hidden" name="debug" value=1>                              -->
-     <!-- <input type="hidden" name="debugEmail" value="psures20@asu.edu">        -->
+    <!--  <input type="hidden" name="debugEmail" value="psures20@asu.edu">        -->
     <!--  ----------------------------------------------------------------------  -->
     
-    <label for="name">Name *</label><input class="form-control" id="name" maxlength="80" name="name" size="20" type="text" required/><br>
+    <label for="name">Contact Name: *</label><input  class="form-control" id="name" maxlength="80" name="name" size="20" type="text" required style="width: 200px;"/>
     
-    <label for="email">Email *</label><input class="form-control" id="email" maxlength="80" name="email" size="20" type="text" required/><br>
+    <label for="email">Email: *</label><input  class="form-control" id="email" maxlength="80" name="email" size="20" type="text" required style="width: 400px;"/>
     
-    <label for="phone">Phone </label><input class="form-control" id="phone" maxlength="40" name="phone" size="20" type="text"/><br>
+    <label for="phone">Phone:</label><input  class="form-control" id="phone" maxlength="40" name="phone" size="20" type="text" style="width: 200px;"/>
     
-    <label for="subject">Subject *</label><input class="form-control" id="subject" maxlength="80" name="subject" size="20" type="text" required/><br>
-
-    <label for="description">Description </label><textarea class="form-control" name="description"></textarea><br>
+    <label for="subject">Subject: *</label><input  class="form-control" id="subject" maxlength="80" name="subject" size="20" type="text" required style="width: 400px;"/>
     
-    <input type="submit" name="submit">
+    <label for="description">Description:</label><textarea  class="form-control" name="description" style="width: 400px;"></textarea>
+    
+    <label for="reason">Case Reason: *</label><select  class="form-control" id="reason" name="reason" required style="width: 400px;"><option value="">--None--</option><option value="Clinic address change">Clinic address change</option>
+    <option value="Report Staff Change">Report Staff Change</option>
+    <option value="Report Change of Ownership">Report Change of Ownership</option>
+    <option value="AHCCCS Provider Enrollment Question">AHCCCS Provider Enrollment Question</option>
+    <option value="TI Eligibility Question">TI Eligibility Question</option>
+    <option value="Performance Measure Question">Performance Measure Question</option>
+    <option value="Incentive Payment Question">Incentive Payment Question</option>
+    <option value="Milestone Question">Milestone Question</option>
+    <option value="Data Harmonization">Data Harmonization</option>
+    <option value="Update Tableau Dashboard users">Update Tableau Dashboard users</option>
+    <option value="Set up/Update SFTP">Set up/Update SFTP</option>
+    <option value="Quality Improvement Collaborative (QIC) Question">Quality Improvement Collaborative (QIC) Question</option>
+    <option value="Technical Assistance Deliverable (TAD)/Canvas Question">Technical Assistance Deliverable (TAD)/Canvas Question</option>
+    <option value="Attribution Question">Attribution Question</option>
+    <option value="Other (Specify below)">Other (Specify below)</option>
+    </select>
+    
+    <label for="priority">Priority: *</label><select  class="form-control" id="priority" name="priority" required style="width: 200px;"><option value="">--None--</option><option value="High">High</option>
+    <option value="Medium">Medium</option>
+    <option value="Low">Low</option>
+    </select><br>
+    
+    <input type="submit" class="form-control" name="submit" style="width: 200px; background-color: maroon; color: white;"><br>
     
     </form>
-</div>
-<p>                    
+    </div>
     <!-- Footer -->
     <div class="footer">
         <!-- Footer Links -->
@@ -82,16 +95,13 @@
         <!-- Copyright -->
     </div>
     <!-- Footer -->
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
 <script src="/assets/js/jquery.min.js"></script>
-<script src="/assets/js/popper.js"></script>
-<script src="/bootstrap/js/bootstrap.min.js"></script>
+<!-- <script src="/assets/js/popper.js"></script> -->
+<!-- <script src="/bootstrap/js/bootstrap.min.js"></script> -->
 <script>
-    $(document).ready( function(){
-        $('#nav-placeholder').load('/qic/nav.html')
-        $('#side-nav-placeholder').load('/qic/side_nav_bar.html')
-    })
+    jQuery(document).ready(function(){
+   jQuery('#nav-placeholder').load('/qic/nav.html');
+   jQuery('#side-nav-placeholder').load('/qic/side_nav_bar.html');
+});
 </script>
-</body>
+    </body>

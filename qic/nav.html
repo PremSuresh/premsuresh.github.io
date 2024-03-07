@@ -8,7 +8,7 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 </ul>
-                <form class="form-inline my-2 my-lg-0" method="get">
+                <form id="searchform" class="form-inline my-2 my-lg-0" method="get">
                     <div class="input-group-prepend">
                         <input class="form-control mr-sm-2" size="40" id="input-search" list="dropdown-recommend" type="search" placeholder="Search - Select and press enter" autocomplete="off"/>
                     </div>
@@ -91,8 +91,7 @@
 
 
 
-    $("form").submit(function(e)
-    {
+    $(document).on("submit", "#searchform", function(e) {
         // Prevents reload
         e.preventDefault();
         // console.log("OKKK")
